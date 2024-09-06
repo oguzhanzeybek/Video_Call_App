@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:video_call_app/videocall.dart';
 
 void main() {
   runApp(const MyApp());
@@ -26,7 +27,7 @@ class RegisterPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white24,
+      backgroundColor: Colors.white,
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Center(
@@ -78,7 +79,10 @@ class RegisterPage extends StatelessWidget {
                     borderRadius: BorderRadius.circular(30),
                   ),
                 ),
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => CallPage()));
+                },
                 child: Text(
                   "Katil",
                 ),
